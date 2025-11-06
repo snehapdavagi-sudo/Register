@@ -1,0 +1,23 @@
+CREATE TABLE registrations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    phone VARCHAR(20),
+    address TEXT,
+    fatherName VARCHAR(100),
+    motherName VARCHAR(100),
+    dob DATE,
+    gender VARCHAR(20),
+    nationality VARCHAR(50),
+    state VARCHAR(50),
+    universityName VARCHAR(100),
+    collegeName VARCHAR(100),
+    technicalSkills TEXT,
+    eventType VARCHAR(100),
+    eventDate DATE,
+    eventTime TIME,
+    venue VARCHAR(100),
+    participationType VARCHAR(50),
+    groupName VARCHAR(100),
+    numberOfMembers INT
+);

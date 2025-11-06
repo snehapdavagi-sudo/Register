@@ -1,0 +1,36 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "<!DOCTYPE html><html><head><title>Registration Details</title></head><body style='font-family: Arial; padding: 20px;'>";
+    echo "<h1>Registration Details</h1>";
+    echo "<p><strong>Full Name:</strong> " . htmlspecialchars($_POST['name']) . "</p>";
+    echo "<p><strong>Email:</strong> " . htmlspecialchars($_POST['email']) . "</p>";
+    echo "<p><strong>Phone Number:</strong> " . htmlspecialchars($_POST['phone']) . "</p>";
+    echo "<p><strong>Address:</strong> " . htmlspecialchars($_POST['address']) . "</p>";
+    echo "<p><strong>Father's Name:</strong> " . htmlspecialchars($_POST['fatherName']) . "</p>";
+    echo "<p><strong>Mother's Name:</strong> " . htmlspecialchars($_POST['motherName']) . "</p>";
+    echo "<p><strong>Date of Birth:</strong> " . htmlspecialchars($_POST['dob']) . "</p>";
+    echo "<p><strong>Gender:</strong> " . htmlspecialchars($_POST['gender']) . "</p>";
+    echo "<p><strong>Nationality:</strong> " . htmlspecialchars($_POST['nationality']) . "</p>";
+    echo "<p><strong>State:</strong> " . htmlspecialchars($_POST['state']) . "</p>";
+    echo "<p><strong>University Name:</strong> " . htmlspecialchars($_POST['universityName']) . "</p>";
+    echo "<p><strong>College Name:</strong> " . htmlspecialchars($_POST['collegeName']) . "</p>";
+    echo "<p><strong>Technical Skills:</strong> " . htmlspecialchars($_POST['technicalSkills']) . "</p>";
+    echo "<p><strong>Event Type:</strong> " . htmlspecialchars($_POST['eventType']) . "</p>";
+    echo "<p><strong>Event Date:</strong> " . htmlspecialchars($_POST['eventDate']) . "</p>";
+    echo "<p><strong>Event Time:</strong> " . htmlspecialchars($_POST['eventTime']) . "</p>";
+    echo "<p><strong>Venue:</strong> " . htmlspecialchars($_POST['venue']) . "</p>";
+    echo "<p><strong>Participation Type:</strong> " . htmlspecialchars($_POST['participationType']) . "</p>";
+
+    if (!empty($_POST['groupName'])) {
+        echo "<p><strong>Group Name:</strong> " . htmlspecialchars($_POST['groupName']) . "</p>";
+    }
+    if (!empty($_POST['numberOfMembers'])) {
+        echo "<p><strong>Number of Members:</strong> " . htmlspecialchars($_POST['numberOfMembers']) . "</p>";
+    }
+
+    echo "<br><a href='index.html' style='color: blue; text-decoration: none;'>← Back to Form</a>";
+    echo "</body></html>";
+} else {
+    echo "<p>No data submitted.</p>";
+}
+?>
